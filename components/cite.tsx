@@ -19,6 +19,21 @@ Font.register({
 
 })
 
+const P = (props: React.ComponentPropsWithRef<typeof Text>) => {
+    return (
+        <Text
+            {...props}
+            hyphenationCallback={value => [value]}
+            style={flatten({
+                fontFamily: 'Montserrat',
+                fontWeight: "light",
+                fontStyle: "italic",
+                ...props.style,
+            })}
+        />
+    )
+}
+
 type CiteProps = {
     cite: string,
     wrap?: string | boolean,
@@ -41,47 +56,33 @@ const Cite = (props: CiteProps) => {
                     {props.children}
                 </View>
 
-                <Text
+                <P
                     style={{
                         paddingTop: "0.2cm",
                         textAlign: "right",
                         fontSize: 8,
-                        fontFamily: 'Montserrat',
-                        fontWeight: "light",
-                        fontStyle: "italic",
                     }}
                 >
                     ({props.cite})
-                </Text>
+                </P>
             </View>
         )
     }
 
     return (
         <View style={{paddingHorizontal: "1cm"}}>
-            <Text
-                hyphenationCallback={value => [value]}
-                style={{
-                    fontSize: 12,
-                    fontFamily: 'Montserrat',
-                    fontWeight: "light",
-                    fontStyle: "italic",
-                }}
-            >
+            <P style={{fontSize: 12}}>
                 “{props.children}”
-            </Text>
-            <Text
+            </P>
+            <P
                 style={{
                     paddingTop: "0.2cm",
                     textAlign: "right",
                     fontSize: 8,
-                    fontFamily: 'Montserrat',
-                    fontWeight: "light",
-                    fontStyle: "italic",
                 }}
             >
                 ({props.cite})
-            </Text>
+            </P>
         </View>
     )
 }
