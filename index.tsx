@@ -4,12 +4,15 @@ import {xmlFileToReactTree, type ComponentMap} from './utils/node.factory';
 
 import {Paragraph, Title} from './components/paragraph';
 import {Chapter, Section} from './components/section';
+import { Cite, Verse } from './components/cite';
 
 const components: ComponentMap = {
     Paragraph,
     Title,
     Chapter,
     Section,
+    Cite,
+    Verse,
 };
 
 const getTreeNode = async (xmlPath: string) => {
