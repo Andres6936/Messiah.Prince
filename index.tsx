@@ -3,12 +3,13 @@ import ReactPDF, {Document, Page, Text, View} from '@react-pdf/renderer';
 import {xmlFileToReactTree, type ComponentMap} from './utils/node.factory';
 
 import {Paragraph, Title} from './components/paragraph';
-import {Chapter} from './components/section';
+import {Chapter, Section} from './components/section';
 
 const components: ComponentMap = {
     Paragraph,
     Title,
     Chapter,
+    Section,
 };
 
 const getTreeNode = async (xmlPath: string) => {

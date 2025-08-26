@@ -150,55 +150,52 @@
         religioso, a fin de que traduzca sin prejuicios.
     </Paragraph>
 
-    <Title size="16" start="true" bold="true">
-        Cual es la razón de los números que hay a la
-        izquierda de cada renglón en este libro.
-    </Title>
-
-    <Paragraph>
-        A mi modo de ver, todo escritor debe estar
-        accesible a la discusión sana y edificante; no
-        encerrarse en su “torre de marfil” sin permitirle a
-        nadie que discuta su teoría. Por eso yo doy acceso a
-    </Paragraph>
-    <Paragraph>
-        que me impugnen lo que digo, porque considero que
-        de la sana discusión sale la luz. De esa manera, me
-        beneficio yo, porque me sacan de mis errores, si es
-        que los tengo, y se benefician mis interlocutores,
-        porque salen de los errores suyos si es que los tienen.
-    </Paragraph>
-    <Paragraph>
-        De los autores que he conocido ninguno ha deseado
-        jamás discutir por escrito y públicamente sus
-        doctrinas, o sus interpretaciones de la Escritura.
-        Dicen las cosas para que uno se las crea
-        dogmáticamente, por aquello de “magister dixit”. Y
-        si uno intenta impugnar con razones y argumentos,
-        por escrito, lo que ellos enseñan, contestan que no
-        desean “perder el tiempo” porque están “muy
-        ocupados”. De esa manera evitan que les demuestren
-        que están errados
-    </Paragraph>
-    <Paragraph>
-        Resumen del capítulo 1. Quien sea un creyente
-        de buena fe, y considere que su religión es la
-        correcta, o que es la mejor, debe predicarla para
-        beneficiar a otros. El propósito de este libro es
-        ayudar a todos los hebreos de buena fe a comprobar
-        que Jesucristo es el Mesías, el Cordero de Dios. De
-        esa manera alcanzan la salvación de sus almas.
-    </Paragraph>
-    <Paragraph>
-        El día que nos enfrentemos al Juicio Final, no nos
-        van a preguntar qué era lo que nos enseñaban
-        nuestros pastores, rabinos o curas, sino, qué era lo
-        que decía la Sagrada Escritura.
-    </Paragraph>
-    <Paragraph>
-        Como que yo no sé el idioma hebreo, me valía de
-        un judío sabra que trabajaba conmigo, el cual por no
-        ser religioso me traducía sin prejuicios. Les
-        recomiendo que hagan algo parecido,
-    </Paragraph>
+    <Section title="Cual es la razón de los números que hay a la izquierda de cada renglón en este libro.">
+        <Paragraph>
+            A mi modo de ver, todo escritor debe estar
+            accesible a la discusión sana y edificante; no
+            encerrarse en su “torre de marfil” sin permitirle a
+            nadie que discuta su teoría. Por eso yo doy acceso a
+        </Paragraph>
+        <Paragraph>
+            que me impugnen lo que digo, porque considero que
+            de la sana discusión sale la luz. De esa manera, me
+            beneficio yo, porque me sacan de mis errores, si es
+            que los tengo, y se benefician mis interlocutores,
+            porque salen de los errores suyos si es que los tienen.
+        </Paragraph>
+        <Paragraph>
+            De los autores que he conocido ninguno ha deseado
+            jamás discutir por escrito y públicamente sus
+            doctrinas, o sus interpretaciones de la Escritura.
+            Dicen las cosas para que uno se las crea
+            dogmáticamente, por aquello de “magister dixit”. Y
+            si uno intenta impugnar con razones y argumentos,
+            por escrito, lo que ellos enseñan, contestan que no
+            desean “perder el tiempo” porque están “muy
+            ocupados”. De esa manera evitan que les demuestren
+            que están errados
+        </Paragraph>
+        <Paragraph>
+            Resumen del capítulo 1. Quien sea un creyente
+            de buena fe, y considere que su religión es la
+            correcta, o que es la mejor, debe predicarla para
+            beneficiar a otros. El propósito de este libro es
+            ayudar a todos los hebreos de buena fe a comprobar
+            que Jesucristo es el Mesías, el Cordero de Dios. De
+            esa manera alcanzan la salvación de sus almas.
+        </Paragraph>
+        <Paragraph>
+            El día que nos enfrentemos al Juicio Final, no nos
+            van a preguntar qué era lo que nos enseñaban
+            nuestros pastores, rabinos o curas, sino, qué era lo
+            que decía la Sagrada Escritura.
+        </Paragraph>
+        <Paragraph>
+            Como que yo no sé el idioma hebreo, me valía de
+            un judío sabra que trabajaba conmigo, el cual por no
+            ser religioso me traducía sin prejuicios. Les
+            recomiendo que hagan algo parecido,
+        </Paragraph>
+    </Section>
 </Chapter>

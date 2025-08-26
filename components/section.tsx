@@ -17,6 +17,21 @@ const Chapter = (props: ChapterProps) => {
     )
 }
 
+type SectionProps = {
+    title: string,
+    children: React.ReactNode,
+}
+
+const Section = (props: SectionProps) => {
+    return (
+        <Fragment>
+            <Title size={16} start="true" bold="true" style={{paddingTop: "1.5cm"}}>{props.title}</Title>
+            {props.children}
+        </Fragment>
+    )
+}
+
 export {
     Chapter,
+    Section,
 }
