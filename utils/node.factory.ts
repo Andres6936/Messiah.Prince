@@ -45,7 +45,7 @@ export function xmlToReactTree(
 
     const doc = parser.parseFromString(xml, 'text/xml');
 
-    function nodeToElement(node: Node): React.ReactNode | null {
+    function nodeToElement(node: Node, index: number): React.ReactNode | null {
         const ELEMENT_NODE = 1;
         const TEXT_NODE = 3;
 
@@ -62,6 +62,8 @@ export function xmlToReactTree(
 
             // props desde atributos
             const props: Record<string, unknown> = {};
+            // Assign the key params to avoid warning and error to traversal the node
+            props.key = index;
             for (let i = 0; i < el.attributes.length; i += 1) {
                 const attr = el.attributes.item(i)!;
                 props[attr.name] = attributeTransform(attr.name, attr.value);
@@ -70,7 +72,7 @@ export function xmlToReactTree(
             // children
             const children: React.ReactNode[] = [];
             for (let i = 0; i < el.childNodes.length; i += 1) {
-                const child = nodeToElement(el.childNodes.item(i));
+                const child = nodeToElement(el.childNodes.item(i), i);
                 if (child !== null && child !== undefined) children.push(child);
             }
 
@@ -96,7 +98,7 @@ export function xmlToReactTree(
     // Construye el árbol desde la raíz del documento (puede tener más de un nodo de primer nivel)
     const roots: React.ReactNode[] = [];
     for (let index = 0; index < doc.childNodes.length; index += 1) {
-        const node = nodeToElement(doc.childNodes.item(index));
+        const node = nodeToElement(doc.childNodes.item(index), index);
         if (node !== null && node !== undefined) roots.push(node);
     }
     return roots;
