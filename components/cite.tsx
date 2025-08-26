@@ -40,6 +40,7 @@ const Cite = (props: CiteProps) => {
             </Text>
             <Text
                 style={{
+                    paddingTop: "0.2cm",
                     textAlign: "right",
                     fontSize: 8,
                     fontFamily: 'Montserrat',
