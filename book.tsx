@@ -8,7 +8,7 @@ const MyDocument = () => (
     <Document>
         <Page size="A4" style={{paddingVertical: "1.5cm", paddingHorizontal: "2cm", textAlign: "justify", fontSize: "14pt", gap: "0.5cm"}}>
             <Chapter title="Demostración de que Jesucristo es el Mesías esperado por los hebreos" chapter={1}>
-                <Paragraph>Por qué escribí este libro</Paragraph>
+                <Paragraph bold>Por qué escribí este libro</Paragraph>
                 <Paragraph>
                     Quien sea un creyente de buena fe, y considere
                     que su creencia es la correcta, o que simplemente es

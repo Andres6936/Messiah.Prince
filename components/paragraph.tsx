@@ -8,6 +8,10 @@ Font.register({
         {
             src: './fonts/Montserrat/static/Montserrat-Regular.ttf',
             fontWeight: "normal",
+        },
+        {
+            src: './fonts/Montserrat/static/Montserrat-Bold.ttf',
+            fontWeight: "bold",
         }
     ]
 
@@ -39,12 +43,21 @@ const Title = (props: React.ComponentPropsWithRef<typeof Text>) => {
     )
 }
 
-const Paragraph = (props: React.ComponentPropsWithRef<typeof Text>) => {
+type ParagraphProps = {
+    bold?: boolean | string,
+}
+
+const Paragraph = (props: React.ComponentPropsWithRef<typeof Text> & ParagraphProps) => {
+    const withStyles = {
+        fontWeight: Boolean(props.bold) ? "bold" : "normal",
+    }
+
     return (
         <Text
             {...props}
             hyphenationCallback={value => [value]}
             style={flatten({
+                ...withStyles,
                 fontFamily: 'Montserrat',
                 fontSize: 13,
                 ...props.style,
