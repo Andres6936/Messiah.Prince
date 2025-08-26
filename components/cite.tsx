@@ -34,6 +34,20 @@ const P = (props: React.ComponentPropsWithRef<typeof Text>) => {
     )
 }
 
+const Mark = ({children}: {children: React.ReactNode}) => {
+    return (
+        <P
+            style={{
+                paddingTop: "0.2cm",
+                textAlign: "right",
+                fontSize: 8,
+            }}
+        >
+            ({children})
+        </P>
+    )
+}
+
 type CiteProps = {
     cite: string,
     wrap?: string | boolean,
@@ -55,16 +69,7 @@ const Cite = (props: CiteProps) => {
                 >
                     {props.children}
                 </View>
-
-                <P
-                    style={{
-                        paddingTop: "0.2cm",
-                        textAlign: "right",
-                        fontSize: 8,
-                    }}
-                >
-                    ({props.cite})
-                </P>
+                <Mark>{props.cite}</Mark>
             </View>
         )
     }
@@ -74,15 +79,7 @@ const Cite = (props: CiteProps) => {
             <P style={{fontSize: 12}}>
                 “{props.children}”
             </P>
-            <P
-                style={{
-                    paddingTop: "0.2cm",
-                    textAlign: "right",
-                    fontSize: 8,
-                }}
-            >
-                ({props.cite})
-            </P>
+            <Mark>{props.cite}</Mark>
         </View>
     )
 }
