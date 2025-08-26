@@ -13,6 +13,7 @@
   "dependencies": {
     "@react-pdf/renderer": "^4.3.0",
     "@react-pdf/stylesheet": "^6.1.0",
+    "@xmldom/xmldom": "^0.8.11",
     "unpdf": "^1.2.1"
   }
 }

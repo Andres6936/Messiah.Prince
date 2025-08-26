@@ -95,9 +95,9 @@ export function xmlToReactTree(
 
     // Construye el árbol desde la raíz del documento (puede tener más de un nodo de primer nivel)
     const roots: React.ReactNode[] = [];
-    for (let i = 0; i < doc.childNodes.length; i += 1) {
-        const n = nodeToElement(doc.childNodes.item(i));
-        if (n !== null && n !== undefined) roots.push(n);
+    for (let index = 0; index < doc.childNodes.length; index += 1) {
+        const node = nodeToElement(doc.childNodes.item(index));
+        if (node !== null && node !== undefined) roots.push(node);
     }
     return roots;
 }

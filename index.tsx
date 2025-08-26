@@ -12,8 +12,6 @@ const components: ComponentMap = {
 
 export async function buildBookFromXml(xmlPath: string) {
     const nodes = await xmlFileToReactTree(xmlPath, components, {
-        textWrapper: Paragraph,
-        trimText: true,
         onUnknownTag: (tagName) => {
             // Ejemplo: si no tienes un componente para "Chapter", podrías usar Section como fallback
             if (tagName === 'Chapter') return Chapter;
