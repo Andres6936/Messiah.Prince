@@ -10,6 +10,11 @@ Font.register({
             fontWeight: "light",
             fontStyle: "italic",
         },
+        {
+            src: './fonts/Montserrat/static/Montserrat-BoldItalic.ttf',
+            fontWeight: "bold",
+            fontStyle: "italic",
+        }
     ]
 
 })
@@ -23,6 +28,7 @@ const Cite = (props: CiteProps) => {
     return (
         <View style={{paddingHorizontal: "1cm"}}>
             <Text
+                hyphenationCallback={value => [value]}
                 style={{
                     fontFamily: 'Montserrat',
                     fontWeight: "light",
@@ -57,12 +63,14 @@ const Verse = (props: VerseProps) => {
         <Fragment>
             <Text
                 style={{
+                    fontWeight: "bold",
                     fontSize: 6,
                 }}
             >
                 {'  '}{props.verse}{'  '}
             </Text>
             <Text
+                hyphenationCallback={value => [value]}
                 style={flatten({
                     fontSize: 11,
                 })}
