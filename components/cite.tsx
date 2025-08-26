@@ -21,8 +21,14 @@ type CiteProps = {
 const Cite = (props: CiteProps) => {
     return (
         <View style={{paddingHorizontal: "1cm"}}>
-            <Text>
-                {props.children}
+            <Text
+                style={{
+                    fontFamily: 'Montserrat',
+                    fontWeight: "light",
+                    fontStyle: "italic",
+                }}
+            >
+                “{props.children}”
             </Text>
         </View>
     )
@@ -40,19 +46,13 @@ const Verse = (props: VerseProps) => {
             <Text
                 style={{
                     fontSize: 6,
-                    fontFamily: 'Montserrat',
-                    fontWeight: "light",
-                    fontStyle: "italic",
                 }}
             >
                 {'  '}{props.verse}{'  '}
             </Text>
             <Text
                 style={flatten({
-                    fontSize: 12,
-                    fontFamily: 'Montserrat',
-                    fontWeight: "light",
-                    fontStyle: "italic",
+                    fontSize: 11,
                 })}
             >
                 {props.children}
