@@ -30,6 +30,7 @@ const Cite = (props: CiteProps) => {
             <Text
                 hyphenationCallback={value => [value]}
                 style={{
+                    fontSize: 12,
                     fontFamily: 'Montserrat',
                     fontWeight: "light",
                     fontStyle: "italic",
@@ -52,6 +53,22 @@ const Cite = (props: CiteProps) => {
     )
 }
 
+const Indicator = ({indicator}: {indicator: string | undefined | null}) => {
+    if (!indicator) return null;
+    if (indicator === '') return null;
+
+    return (
+        <Text
+            style={{
+                fontWeight: "bold",
+                fontSize: 6,
+            }}
+        >
+            {'  '}{indicator}{'  '}
+        </Text>
+    )
+}
+
 type VerseProps = {
     verse: string,
     children: React.ReactNode,
@@ -61,14 +78,7 @@ const Verse = (props: VerseProps) => {
 
     return (
         <Fragment>
-            <Text
-                style={{
-                    fontWeight: "bold",
-                    fontSize: 6,
-                }}
-            >
-                {'  '}{props.verse}{'  '}
-            </Text>
+            <Indicator indicator={props.verse}/>
             <Text
                 hyphenationCallback={value => [value]}
                 style={flatten({
