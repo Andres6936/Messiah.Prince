@@ -15,6 +15,7 @@ Font.register({
 })
 
 type CiteProps = {
+    cite: string,
     children: React.ReactNode,
 }
 
@@ -29,6 +30,17 @@ const Cite = (props: CiteProps) => {
                 }}
             >
                 “{props.children}”
+            </Text>
+            <Text
+                style={{
+                    textAlign: "right",
+                    fontSize: 8,
+                    fontFamily: 'Montserrat',
+                    fontWeight: "light",
+                    fontStyle: "italic",
+                }}
+            >
+                ({props.cite})
             </Text>
         </View>
     )

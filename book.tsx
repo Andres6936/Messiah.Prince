@@ -69,7 +69,7 @@ const MyDocument = () => (
                     me traducía al inglés lo que yo le preguntaba.
                 </Paragraph>
 
-                <Cite>
+                <Cite cite="Gn 29:27-28">
                     <Verse verse="27">
                         Cumple la semana de ésta, y se te dará también la otra, por el servicio que hicieres conmigo
                         otros siete años.
