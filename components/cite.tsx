@@ -84,6 +84,7 @@ const Verse = (props: VerseProps) => {
                 hyphenationCallback={value => [value]}
                 style={flatten({
                     fontSize: 11,
+                    lineHeight: 1.3,
                 })}
             >
                 {props.children}
