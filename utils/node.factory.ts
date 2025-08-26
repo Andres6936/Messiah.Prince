@@ -38,8 +38,8 @@ export function xmlToReactTree(
     const parser = new DOMParser({
         errorHandler: {
             warning() {},
-            error(msg) { throw new Error(msg); },
-            fatalError(msg) { throw new Error(msg); },
+            error(msg: string) { throw new Error(msg); },
+            fatalError(msg: string) { throw new Error(msg); },
         },
     } as any);
 
