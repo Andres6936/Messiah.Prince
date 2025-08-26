@@ -31,6 +31,12 @@ Font.register({
     ]
 })
 
+const toInteger = (value: string | number): number => {
+    if (typeof value === 'number') return value;
+
+    return parseInt(value, 10);
+};
+
 type TitleProps = {
     size?: string | number,
     start?: string | boolean,
@@ -40,7 +46,7 @@ type TitleProps = {
 
 const Title = (props: React.ComponentPropsWithRef<typeof Text> & TitleProps) => {
     const withStyles = {
-        fontSize: Number.isInteger(props.size) ? Number(props.size) : 24,
+        fontSize: props.size ? toInteger(props.size) : 24,
         textAlign: (props.start ? "left" : props.end ? "right" : "center") satisfies TextAlign as TextAlign,
         fontWeight: Boolean(props.bold) ? "bold" : "normal",
     }

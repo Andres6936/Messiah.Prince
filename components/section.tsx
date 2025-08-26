@@ -25,7 +25,7 @@ type SectionProps = {
 const Section = (props: SectionProps) => {
     return (
         <Fragment>
-            <Title size={16} start="true" bold="true" style={{paddingTop: "1.5cm"}}>{props.title}</Title>
+            <Title size="16" start="true" bold="true" style={{paddingTop: "1.2cm", paddingBottom: "0.3cm"}}>{props.title}</Title>
             {props.children}
         </Fragment>
     )
