@@ -23,6 +23,10 @@ Font.register({
         {
             src: './fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf',
             fontWeight: "normal",
+        },
+        {
+            src: './fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf',
+            fontWeight: "bold",
         }
     ]
 })
@@ -31,12 +35,14 @@ type TitleProps = {
     size?: string | number,
     start?: string | boolean,
     end?: string | boolean,
+    bold?: string | boolean,
 }
 
 const Title = (props: React.ComponentPropsWithRef<typeof Text> & TitleProps) => {
     const withStyles = {
         fontSize: Number.isInteger(props.size) ? Number(props.size) : 24,
         textAlign: (props.start ? "left" : props.end ? "right" : "center") satisfies TextAlign as TextAlign,
+        fontWeight: Boolean(props.bold) ? "bold" : "normal",
     }
 
     return (

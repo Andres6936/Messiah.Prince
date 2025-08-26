@@ -150,7 +150,7 @@
         religioso, a fin de que traduzca sin prejuicios.
     </Paragraph>
 
-    <Title size="16" start="true">
+    <Title size="16" start="true" bold="true">
         Cual es la razón de los números que hay a la
         izquierda de cada renglón en este libro.
     </Title>
