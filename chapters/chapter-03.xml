@@ -265,7 +265,7 @@
         que antes leímos fraccionadamente.
     </Paragraph>
 
-    <Cite cite="Isa 52:13-15 hasta 53:1-12">
+    <Cite cite="Isa 52:13-15 hasta 53:1-12" wrap="true">
         <Verse verse="(Isaías 52:13)">
             He aquí que mi siervo será
             prosperado, será engrandecido y ensalzado, y

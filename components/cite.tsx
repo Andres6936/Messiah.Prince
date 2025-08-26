@@ -21,10 +21,42 @@ Font.register({
 
 type CiteProps = {
     cite: string,
+    wrap?: string | boolean,
     children: React.ReactNode,
 }
 
 const Cite = (props: CiteProps) => {
+    if (props.wrap && Boolean(props.wrap)) {
+        return (
+            <View style={{paddingHorizontal: "1cm"}}>
+                <View
+                    style={{
+                        gap: "0.3cm",
+                        fontSize: 12,
+                        fontFamily: 'Montserrat',
+                        fontWeight: "light",
+                        fontStyle: "italic",
+                    }}
+                >
+                    {props.children}
+                </View>
+
+                <Text
+                    style={{
+                        paddingTop: "0.2cm",
+                        textAlign: "right",
+                        fontSize: 8,
+                        fontFamily: 'Montserrat',
+                        fontWeight: "light",
+                        fontStyle: "italic",
+                    }}
+                >
+                    ({props.cite})
+                </Text>
+            </View>
+        )
+    }
+
     return (
         <View style={{paddingHorizontal: "1cm"}}>
             <Text
@@ -54,7 +86,7 @@ const Cite = (props: CiteProps) => {
     )
 }
 
-const Indicator = ({indicator}: {indicator: string | undefined | null}) => {
+const Indicator = ({indicator}: { indicator: string | undefined | null }) => {
     if (!indicator) return null;
     if (indicator === '') return null;
 
@@ -78,7 +110,7 @@ type VerseProps = {
 const Verse = (props: VerseProps) => {
 
     return (
-        <Fragment>
+        <Text hyphenationCallback={value => [value]}>
             <Indicator indicator={props.verse}/>
             <Text
                 hyphenationCallback={value => [value]}
@@ -89,7 +121,7 @@ const Verse = (props: VerseProps) => {
             >
                 {props.children}
             </Text>
-        </Fragment>
+        </Text>
     )
 }
 
