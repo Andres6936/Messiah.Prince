@@ -1,6 +1,6 @@
 import type React from "react"
 import {Font, Text} from "@react-pdf/renderer"
-import {flatten} from "@react-pdf/stylesheet";
+import {flatten, type TextAlign} from "@react-pdf/stylesheet";
 
 Font.register({
     family: 'Montserrat',
@@ -27,16 +27,25 @@ Font.register({
     ]
 })
 
+type TitleProps = {
+    size?: string | number,
+    start?: string | boolean,
+    end?: string | boolean,
+}
 
-const Title = (props: React.ComponentPropsWithRef<typeof Text>) => {
+const Title = (props: React.ComponentPropsWithRef<typeof Text> & TitleProps) => {
+    const withStyles = {
+        fontSize: Number.isInteger(props.size) ? Number(props.size) : 24,
+        textAlign: (props.start ? "left" : props.end ? "right" : "center") satisfies TextAlign as TextAlign,
+    }
+
     return (
         <Text
             {...props}
             hyphenationCallback={value => [value]}
             style={flatten({
+                ...withStyles,
                 fontFamily: 'Playfair_Display',
-                fontSize: 24,
-                textAlign: "center",
                 ...props.style,
             })}
         />
