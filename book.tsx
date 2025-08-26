@@ -1,12 +1,18 @@
 import ReactPDF, {Document, Page, Text} from '@react-pdf/renderer';
 import {Paragraph, Title} from "./components/paragraph.tsx";
-import { Chapter } from './components/section.tsx';
-
+import {Chapter} from './components/section.tsx';
+import {Cite, Verse} from './components/cite.tsx';
 
 
 const MyDocument = () => (
     <Document>
-        <Page size="A4" style={{paddingVertical: "1.5cm", paddingHorizontal: "2cm", textAlign: "justify", fontSize: "14pt", gap: "0.5cm"}}>
+        <Page size="A4" style={{
+            paddingVertical: "1.5cm",
+            paddingHorizontal: "2cm",
+            textAlign: "justify",
+            fontSize: "14pt",
+            gap: "0.5cm"
+        }}>
             <Chapter title="Demostración de que Jesucristo es el Mesías esperado por los hebreos" chapter={1}>
                 <Paragraph bold>Por qué escribí este libro</Paragraph>
                 <Paragraph>
@@ -26,72 +32,6 @@ const MyDocument = () => (
                     incluyendo a los judíos.
                 </Paragraph>
                 <Paragraph>
-                    El propósito de este libro es ayudar a todos los
-                    hebreos de buena fe a comprobar que Jesucristo
-                    es el Mesías. Lo hago, para que al comprobarlo,
-                    puedan obtener la salvación de su alma, aceptándolo
-                    como el Cordero de Dios que quita el pecado del
-                    mundo.
-                </Paragraph>
-                <Paragraph>
-                    Abraham, Isaac, Jacob, Moisés y los demás
-                    antecesores sacrificaban un cordero para limpiar sus
-                    pecados. Ellos lo hacían porque habían recibido el
-                    conocimiento de que Dios enviaría a su Mesías, que
-                    era el Verdadero Cordero de Dios que quita el
-                    pecado del mundo. Hoy en día algunos ignorantes
-                    califican de salvajismo el sacrificio de corderos que
-                    para limpiar sus pecados hacían los judíos fieles en
-                    épocas anteriores a la destrucción del Templo por
-                    los romanos. Eso no era un salvajismo, era un
-                    simbolismo de lo que ellos sabían que ocurriría
-                    algún día. Ese Cordero de Dios era Jesucristo. Por
-                    eso después de su sacrificio Dios permitió que
-                    terminaran los sacrificios de corderos en el Templo.
-                </Paragraph>
-                <Paragraph>
-                    El motivo de este libro es demostrar a los
-                    judíos que creen en las Escrituras de Moisés y los
-                    profetas, que Jesús es el Mesías, el Verdadero
-                    Cordero de Dios. No me baso para afirmar esto, en
-                    libros escritos por “sabios”, sino en las Escrituras
-                    hebreas, es decir, en el Antiguo Testamento. No
-                    estoy aquí trayendo la opinión de curas, rabinos o
-                    pastores, a los que sus seguidores llaman “sabios”.
-                    El único Sabio es Nuestro Creador, que nos dio las
-                    Escrituras de los profetas, para que guiáramos por
-                    ellas nuestro comportamiento.
-                    Para alcanzáramos el conocimiento de quién que sería y cuándo
-                    vendría el deseado Mesías. Si leemos las
-                    Escrituras veremos que el Mesías iba a tener dos
-                    venidas a la Tierra. Una como cordero, a dejarse
-                    sacrificar por los pecados de los que aman a Dios.
-                    Otra como Rey del Mundo, para gobernar con vara
-                    de hierro. La Primera Venida ya fue llevada a cabo
-                    con el nacimiento, vida sin pecados, crucifixión,
-                    muerte y resurrección de Jesucristo. La Segunda
-                    Venida está por venir, y no se halla muy lejos en el
-                    tiempo.
-                </Paragraph>
-                <Paragraph>
-                    Cuando una persona cree de buena fe tener una
-                    verdad que pueda beneficiar a otros, su deber es
-                    compartirla. Eso es lo que estoy haciendo.
-                </Paragraph>
-                <Paragraph>
-                    Dios no nos da las Escrituras para que
-                    tengamos que depender de otros para
-                    entenderlas. El Creador da Su Palabra para que
-                    cualquier ser humano pueda entenderla; lo mismo
-                    un sabio que un pescador. No obstante, como
-                    siempre ocurre, surgen unos aprovechados que
-                    pretenden hacernos creer que si no es a través de su
-                    personal “inteligencia genial”, o a través de su
-                    “divina unción”, nosotros, simples mortales, no
-                    podemos llegar a saber qué es lo que Dios quiere de
-                    nosotros.
-                </Paragraph>
-                <Paragraph>
                     El día que nos enfrentemos al Juicio Final, no
                     nos van a preguntar qué era lo que nos enseñaban
                     nuestros pastores, rabinos o curas, sino, qué era lo
@@ -107,19 +47,6 @@ const MyDocument = () => (
                     su “sabiduría” y de sus muchos estudios. Dios le da
                     oportunidad a todos los humanos a buscar la verdad,
                     no tenemos que depender de otros.
-                </Paragraph>
-                <Paragraph>
-                    Yo les aconsejo a los que lean este libro, que
-                    busquen un Antiguo Testamento, escrito en
-                    hebreo, impreso en una imprenta ortodoxa, para
-                    que comprueben la veracidad de los argumentos
-                    aquí esgrimidos. No usen traducciones a idiomas
-                    corrientes, porque cuando esos traductores llegan a
-                    aquellos pasajes que demuestran que Jesucristo es el
-                    Mesías, los intereses creados hacen que distorsionen
-                    la traducción. Lo escrito en hebreo no está
-                    distorsionado, sobre todo los ejemplares antiguos
-                    que se hallanen bibliotecas.
                 </Paragraph>
                 <Paragraph>
                     Los ejemplares antiguos son confiables, por varias
@@ -141,6 +68,17 @@ const MyDocument = () => (
                     prejuiciada. Como que ambos hablábamos inglés, él
                     me traducía al inglés lo que yo le preguntaba.
                 </Paragraph>
+
+                <Cite>
+                    <Verse verse="27">
+                        Cumple la semana de ésta, y se te dará también la otra, por el servicio que hicieres conmigo
+                        otros siete años.
+                    </Verse>
+                    <Verse verse='28'>
+                        E hizo Jacob así, y cumplió la semana de aquélla, y él le dio a Rachel su hija por mujer.
+                    </Verse>
+                </Cite>
+
                 <Paragraph>
                     Yo tengo un Antiguo Testamento escrito en
                     hebreo, que me fue regalado por un amigo judío ya
