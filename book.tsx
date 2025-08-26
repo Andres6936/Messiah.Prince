@@ -1,14 +1,14 @@
 import ReactPDF, {Document, Page, Text} from '@react-pdf/renderer';
-import {Paragraph} from "./components/paragraph.tsx";
+import {Paragraph, Title} from "./components/paragraph.tsx";
 
 
 
 const MyDocument = () => (
     <Document>
         <Page size="A4" style={{paddingVertical: "1.5cm", paddingHorizontal: "2cm", textAlign: "justify", fontSize: "14pt", gap: "0.5cm"}}>
-            <Text>Demostración de que Jesucristo es el Mesías esperado por los hebreos</Text>
-            <Text>Capítulo 1</Text>
-            <Text>Por qué escribí este libro</Text>
+            <Title>Demostración de que Jesucristo es el Mesías esperado por los hebreos</Title>
+            <Title style={{fontSize: 16}}>Capítulo 1</Title>
+            <Paragraph>Por qué escribí este libro</Paragraph>
             <Paragraph>
                 Quien sea un creyente de buena fe, y considere
                 que su creencia es la correcta, o que simplemente es

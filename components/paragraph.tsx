@@ -13,6 +13,32 @@ Font.register({
 
 })
 
+Font.register({
+    family: "Playfair_Display",
+    fonts: [
+        {
+            src: './fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf',
+            fontWeight: "normal",
+        }
+    ]
+})
+
+
+const Title = (props: React.ComponentPropsWithRef<typeof Text>) => {
+    return (
+        <Text
+            {...props}
+            hyphenationCallback={value => [value]}
+            style={flatten({
+                fontFamily: 'Playfair_Display',
+                fontSize: 24,
+                textAlign: "center",
+                ...props.style,
+            })}
+        />
+    )
+}
+
 const Paragraph = (props: React.ComponentPropsWithRef<typeof Text>) => {
     return (
         <Text
@@ -21,9 +47,10 @@ const Paragraph = (props: React.ComponentPropsWithRef<typeof Text>) => {
             style={flatten({
                 fontFamily: 'Montserrat',
                 fontSize: 13,
-            }, props.style)}
+                ...props.style,
+            })}
         />
     )
 }
 
-export {Paragraph}
+export {Title, Paragraph}
