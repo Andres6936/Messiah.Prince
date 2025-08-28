@@ -27,7 +27,7 @@ const getTreeNode = async (xmlPath: string) => {
 const withBook = (nodes: React.ReactNode) => {
     return (
         <Document>
-            <Page size="A4" style={{paddingVertical: "1.5cm", paddingHorizontal: "2cm", textAlign: "justify", fontSize: "14pt", gap: "0.5cm"}}>
+            <Page size="A4" style={{paddingVertical: "1.5cm", paddingHorizontal: "2cm", textAlign: "justify", fontSize: "14pt"}}>
                 {nodes}
             </Page>
         </Document>

@@ -1,5 +1,6 @@
 import React, {Fragment} from "react"
 import {Title} from "./paragraph.tsx";
+import { View } from "@react-pdf/renderer";
 
 type ChapterProps = {
     title: string,
@@ -9,11 +10,11 @@ type ChapterProps = {
 
 const Chapter = (props: ChapterProps) => {
     return (
-        <Fragment>
+        <View style={{gap: "0.5cm"}} break={Number(props.chapter) !== 1}>
             <Title>{props.title}</Title>
             <Title style={{fontSize: 16}}>Capítulo {props.chapter}</Title>
             {props.children}
-        </Fragment>
+        </View>
     )
 }
 
