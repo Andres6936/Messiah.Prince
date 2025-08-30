@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactPDF, {Document, Page, Text, View} from '@react-pdf/renderer';
-import {xmlFileToReactTree, type ComponentMap} from './utils/node.factory';
 
+import {Cite, Verse} from './components/cite';
 import {Paragraph, Title} from './components/paragraph';
 import {Chapter, Section} from './components/section';
-import { Cite, Verse } from './components/cite';
+import {Bookmark, Section as SectionBookmark} from "./components/bookmark.tsx";
+import {getChapterAndTitles} from './utils/chapter.extract';
+import {xmlFileToReactTree, type ComponentMap} from './utils/node.factory';
 
 const components: ComponentMap = {
     Paragraph,
@@ -24,10 +26,24 @@ const getTreeNode = async (xmlPath: string) => {
     });
 };
 
-const withBook = (nodes: React.ReactNode) => {
+const withBook = (nodes: React.ReactNode, metadata: { chapter: string, title: string, metadata: string[] }[]) => {
     return (
         <Document>
-            <Page size="A4" style={{paddingVertical: "1.5cm", paddingHorizontal: "2cm", textAlign: "justify", fontSize: "14pt"}}>
+            <Page size="A4" style={{
+                paddingVertical: "1.5cm",
+                paddingHorizontal: "2cm",
+                textAlign: "justify",
+                fontSize: "14pt",
+                gap: "0.7cm"
+            }}>
+                {metadata.map(it => (
+                    <SectionBookmark key={it.chapter} title={it.title} chapter={it.chapter}>
+                        {it.metadata.map((it, index) => <Bookmark key={index} title={it}/>)}
+                    </SectionBookmark>
+                ))}
+            </Page>
+            <Page size="A4"
+                  style={{paddingVertical: "1.5cm", paddingHorizontal: "2cm", textAlign: "justify", fontSize: "14pt"}}>
                 {nodes}
             </Page>
         </Document>
@@ -42,10 +58,12 @@ const withBook = (nodes: React.ReactNode) => {
         chapters.push(file);
     }
 
+    const metadata = []
     const nodes = []
     for await (let chapter of chapters) {
         nodes.push(await getTreeNode(chapter))
+        metadata.push(await getChapterAndTitles(chapter))
     }
 
-    ReactPDF.render(withBook(nodes), `./book-x.pdf`);
+    ReactPDF.render(withBook(nodes, metadata), `./book-x.pdf`);
 })()
