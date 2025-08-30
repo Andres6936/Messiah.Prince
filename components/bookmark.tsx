@@ -57,7 +57,9 @@ const Bookmark = (props: BookmarkProps) => {
                     lineHeight: 1.5
                 }}
             >
-                {props.title}
+                <Text hyphenationCallback={(word) => [word]}>
+                    {props.title}
+                </Text>
             </Link>
         </View>
     )
