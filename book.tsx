@@ -1,12 +1,15 @@
-import ReactPDF, {Document, Page, Text, View} from '@react-pdf/renderer';
-import {Paragraph, Title} from "./components/paragraph.tsx";
+import ReactPDF, {Document, Page} from '@react-pdf/renderer';
+
+import {Cover} from "./components/cover.tsx";
 import {Chapter} from './components/section.tsx';
-import { Bookmark, Section as SectionBookmark } from './components/bookmark.tsx';
 import {Cite, Verse} from './components/cite.tsx';
+import {Paragraph} from "./components/paragraph.tsx";
+import {Bookmark, Section as SectionBookmark} from './components/bookmark.tsx';
 
 
 const MyDocument = () => (
     <Document>
+        <Cover/>
         <Page size="A4" style={{
             paddingVertical: "1.5cm",
             paddingHorizontal: "2cm",
