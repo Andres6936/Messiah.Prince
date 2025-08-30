@@ -97,22 +97,23 @@ const MyDocument = () => (
                     El día que nos enfrentemos al Juicio Final, no
                     nos van a preguntar qué era lo que nos enseñaban
                     nuestros pastores, rabinos o curas, sino, qué era lo
-                    que decía la Sagrada Escritura. Es por eso que en
+                    que decía la Sagrada Escritura. <P bold="true" italic="true">Es por eso que en
                     este libro no se va a mencionar la opinión de ningún
                     rabino, cura, pastor o sabio teólogo, sino lo que
                     dijeron los verdaderos profetas de Dios.
+                </P>
                 </Paragraph>
                 <Paragraph>
-                    El clero de todas las religiones por lo general
-                    “vive de su cuento” y nos cobra muy caro para
+                    <P italic="true">El clero de todas las religiones por lo general
+                        “vive de su cuento”</P> y nos cobra muy caro para
                     “enseñarnos” lo que ellos dicen ser el producto de
                     su “sabiduría” y de sus muchos estudios. Dios le da
                     oportunidad a todos los humanos a buscar la verdad,
                     no tenemos que depender de otros.
                 </Paragraph>
                 <Paragraph>
-                    Los ejemplares antiguos son confiables, por varias
-                    razones. Primero, los judíos que son verdaderos
+                    <P italic="true" underline="true">Los ejemplares antiguos son confiables, por varias
+                        razones.</P> Primero, los judíos que son verdaderos
                     creyentes no han permitido que se distorsione la
                     Palabra de Dios. Segundo, los que hacen
                     traducciones del hebreo al inglés, al español o a
@@ -142,9 +143,10 @@ const MyDocument = () => (
                 </Cite>
 
                 <Paragraph>
-                    Yo tengo un Antiguo Testamento escrito en
-                    hebreo, que me fue regalado por un amigo judío ya
-                    fallecido, el cuál me lo trajo de Israel. Cuando yo
+                    <P bold="true" italic="true" underline="true">Yo tengo un Antiguo Testamento escrito en
+                        hebreo, que me fue regalado por un amigo judío ya
+                        fallecido, el cuál me lo trajo de Israel.</P>
+                    Cuando yo
                     quería comprobar si lo que decía un pasaje del
                     Antiguo Testamento traducido por Reina-Valera,
                     concordaba con lo escrito en hebreo, yo fotocopiaba
