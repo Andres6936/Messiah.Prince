@@ -5,7 +5,7 @@ import "./utils/fonts.register"
 
 import {Cite, Verse} from './components/cite';
 import {Cover} from './components/cover.tsx';
-import {Paragraph, Title} from './components/paragraph';
+import {P, Paragraph, Title} from './components/paragraph';
 import {Chapter, Section} from './components/section';
 import {Bookmark, Section as SectionBookmark} from "./components/bookmark.tsx";
 import {getChapterAndTitles, type NodeMetadata} from './utils/chapter.extract';
@@ -19,6 +19,7 @@ const components: ComponentMap = {
     Section,
     Cite,
     Verse,
+    P,
 };
 
 const getTreeNode = async (xmlPath: string) => {
