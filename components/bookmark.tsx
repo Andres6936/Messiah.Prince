@@ -2,6 +2,7 @@ import React from "react";
 import {Link, Text, View} from "@react-pdf/renderer";
 import {getShortHash} from "../utils/hash.util.ts";
 import {Title} from "./paragraph.tsx";
+import {defaultStyles} from "../utils/defaultStyles.ts";
 
 const Separator = () => {
     return (
@@ -70,7 +71,7 @@ const Bookmark = (props: BookmarkProps) => {
                 href={`#${getShortHash(props.title)}`}
                 style={{
                     flex: 1,
-                    color: "black",
+                    color: defaultStyles.primary,
                     fontSize: 12,
                     fontStyle: "italic",
                     textDecoration: "none",

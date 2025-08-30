@@ -1,6 +1,7 @@
 import type React from "react"
 import {Font, Text} from "@react-pdf/renderer"
 import {flatten, type TextAlign} from "@react-pdf/stylesheet";
+import {defaultStyles} from "../utils/defaultStyles.ts";
 
 Font.register({
     family: 'Montserrat',
@@ -57,6 +58,7 @@ const Title = (props: React.ComponentPropsWithRef<typeof Text> & TitleProps) => 
             hyphenationCallback={value => [value]}
             style={flatten({
                 ...withStyles,
+                color: defaultStyles.primary,
                 fontFamily: 'Playfair_Display',
                 ...props.style,
             })}
@@ -79,6 +81,7 @@ const Paragraph = (props: React.ComponentPropsWithRef<typeof Text> & ParagraphPr
             hyphenationCallback={value => [value]}
             style={flatten({
                 ...withStyles,
+                color: defaultStyles.primary,
                 fontFamily: 'Montserrat',
                 fontSize: 13,
                 ...props.style,

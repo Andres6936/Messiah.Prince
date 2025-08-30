@@ -1,5 +1,6 @@
 import {Page, Text, View} from "@react-pdf/renderer";
 import {Paragraph, Title} from "./paragraph.tsx";
+import {defaultStyles} from "../utils/defaultStyles.ts";
 
 const Cover = () => {
     return (
@@ -12,8 +13,8 @@ const Cover = () => {
             fontSize: "14pt",
             gap: "0.7cm",
             border: "12pt",
-            borderColor: "#003049",
-            backgroundColor: "#f9f7f3"
+            borderColor: defaultStyles.primary,
+            backgroundColor: defaultStyles.background,
         }}>
             <View style={{
                 position: "absolute",
@@ -26,7 +27,7 @@ const Cover = () => {
                 </Paragraph>
             </View>
 
-            <Title bold="true" size={45} style={{lineHeight: 1.2, color: "#003049"}}>
+            <Title bold="true" size={45} style={{lineHeight: 1.2, color: defaultStyles.primary}}>
                 Demostración de que Jesucristo es el Mesías esperado por los hebreos
             </Title>
             <View style={{

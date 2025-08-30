@@ -5,12 +5,14 @@ import {Chapter} from './components/section.tsx';
 import {Cite, Verse} from './components/cite.tsx';
 import {Paragraph} from "./components/paragraph.tsx";
 import {Bookmark, Section as SectionBookmark} from './components/bookmark.tsx';
+import {defaultStyles} from "./utils/defaultStyles.ts";
 
 
 const MyDocument = () => (
     <Document>
         <Cover/>
         <Page size="A4" style={{
+            backgroundColor: defaultStyles.background,
             paddingVertical: "1.5cm",
             paddingHorizontal: "2cm",
             textAlign: "justify",
@@ -64,6 +66,7 @@ const MyDocument = () => (
         </Page>
 
         <Page size="A4" style={{
+            backgroundColor: defaultStyles.background,
             paddingVertical: "1.5cm",
             paddingHorizontal: "2cm",
             textAlign: "justify",

@@ -1,6 +1,7 @@
 import React, {Fragment} from "react";
 import {Font, Text, View} from "@react-pdf/renderer"
 import {flatten} from "@react-pdf/stylesheet";
+import {defaultStyles} from "../utils/defaultStyles.ts";
 
 Font.register({
     family: 'Montserrat',
@@ -25,6 +26,7 @@ const P = (props: React.ComponentPropsWithRef<typeof Text>) => {
             {...props}
             hyphenationCallback={value => [value]}
             style={flatten({
+                color: defaultStyles.primary,
                 fontFamily: 'Montserrat',
                 fontWeight: "light",
                 fontStyle: "italic",
