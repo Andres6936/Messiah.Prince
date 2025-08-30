@@ -1,7 +1,7 @@
 import React, {Fragment} from "react"
 import {Title} from "./paragraph.tsx";
-import { View } from "@react-pdf/renderer";
-import { getShortHash } from "../utils/hash.util.ts";
+import {View} from "@react-pdf/renderer";
+import {getShortHash} from "../utils/hash.util.ts";
 
 type ChapterProps = {
     title: string,
@@ -27,7 +27,14 @@ type SectionProps = {
 const Section = (props: SectionProps) => {
     return (
         <Fragment>
-            <Title size="16" start="true" bold="true" style={{paddingTop: "1.2cm", paddingBottom: "0.3cm"}}>{props.title}</Title>
+            <Title
+                size="16"
+                start="true"
+                id={getShortHash(props.title)}
+                bold="true" style={{paddingTop: "1.2cm", paddingBottom: "0.3cm"}}
+            >
+                {props.title}
+            </Title>
             {props.children}
         </Fragment>
     )

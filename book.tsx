@@ -1,11 +1,65 @@
-import ReactPDF, {Document, Page, Text} from '@react-pdf/renderer';
+import ReactPDF, {Document, Page, Text, View} from '@react-pdf/renderer';
 import {Paragraph, Title} from "./components/paragraph.tsx";
 import {Chapter} from './components/section.tsx';
+import { Bookmark, Section as SectionBookmark } from './components/bookmark.tsx';
 import {Cite, Verse} from './components/cite.tsx';
 
 
 const MyDocument = () => (
     <Document>
+        <Page size="A4" style={{
+            paddingVertical: "1.5cm",
+            paddingHorizontal: "2cm",
+            textAlign: "justify",
+            fontSize: "14pt",
+            gap: "0.7cm"
+        }}>
+            <SectionBookmark title="Demostración de que Jesucristo es el Mesías esperado por los hebreos" chapter="1">
+                <Bookmark title="Cual es la razón de los números que hay a la izquierda de cada renglón en este libro."/>
+                <Bookmark title="Resumen del capítulo 1"/>
+            </SectionBookmark>
+
+            <SectionBookmark title="La profecía de Daniel de las 70 semanas de años nos dice la época en que vendría el Mesías" chapter='2'>
+                <Bookmark title="Resumen del capítulo 2"/>
+            </SectionBookmark>
+
+            <SectionBookmark title="Isaías profetiza claramente el sacrificio de Jesucristo" chapter='3'>
+                <Bookmark title="Resumen del capítulo 3"/>
+            </SectionBookmark>
+
+            <SectionBookmark title="El profeta Malaquías advirtió que el Mesías entraría en aquel Templo, y que tendría un precursor; lo mismo profetizó Haggeo" chapter='4'>
+                <Bookmark title="Resumen del capítulo 4"/>
+            </SectionBookmark>
+
+            <SectionBookmark title="Varias otras profecías" chapter='5'>
+                <Bookmark title="Resumen del capítulo 5"/>
+            </SectionBookmark>
+
+            <SectionBookmark title='¿Debe un sincero adorador de Dios cambiar sus leyes sin autorización divina? La Pascua' chapter='6'>
+                <Bookmark title="Resumen del capítulo 6"/>
+            </SectionBookmark>
+
+            <SectionBookmark title='La destrucción de las genealogías y el Mesías' chapter='7'>
+                <Bookmark title="Resumen del capítulo 7"/>
+            </SectionBookmark>
+
+            <SectionBookmark title='Las genealogías y el sacerdocio' chapter='8'>
+                <Bookmark title="Resumen del capítulo 8"/>
+            </SectionBookmark>
+
+            <SectionBookmark title='¿Es Jesucristo el Hijo de Dios?' chapter='9'>
+                <Bookmark title="Resumen del capítulo 9"/>
+            </SectionBookmark>
+
+            <SectionBookmark title='Calumniar a Cristo es más fácil que leer la Escritura, pero más dañino para el calumniador' chapter='10'>
+                <Bookmark title="Resumen del capítulo 10"/>
+            </SectionBookmark>
+
+            <SectionBookmark title='Profecías del Antiguo y el Nuevo Testamento nos indican que los judíos se convertirían a Cristo al final de los tiempos' chapter='11'>
+                <Bookmark title="Resumen del capítulo 11"/>
+            </SectionBookmark>
+        </Page>
+
         <Page size="A4" style={{
             paddingVertical: "1.5cm",
             paddingHorizontal: "2cm",
