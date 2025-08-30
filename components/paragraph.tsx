@@ -2,6 +2,7 @@ import type React from "react"
 import {Text} from "@react-pdf/renderer"
 import {flatten, type FontStyle, type FontWeight, type TextAlign, type TextDecoration} from "@react-pdf/stylesheet";
 import {defaultStyles} from "../utils/defaultStyles.ts";
+import { Fragment } from "react";
 
 
 const toInteger = (value: string | number): number => {
@@ -63,27 +64,35 @@ const Paragraph = (props: React.ComponentPropsWithRef<typeof Text> & ParagraphPr
 }
 
 type Props = {
-    bold?: string | boolean
-    italic?: string | boolean
-    underline?: string | boolean
+    ss?: string | boolean
+    se?: string | boolean
+    b?: string | boolean
+    i?: string | boolean
+    u?: string | boolean
 }
 
 const P = (props: React.ComponentPropsWithRef<typeof Text> & Props) => {
     const withStyles = {
-        fontWeight: Boolean(props.bold) ? "semibold" : "normal" satisfies FontWeight,
-        fontStyle: Boolean(props.italic) ? "italic" : "normal" satisfies FontStyle as FontStyle,
-        textDecoration: Boolean(props.underline) ? "underline" : "none" satisfies TextDecoration as TextDecoration,
+        fontWeight: Boolean(props.b) ? "semibold" : "normal" satisfies FontWeight,
+        fontStyle: Boolean(props.i) ? "italic" : "normal" satisfies FontStyle as FontStyle,
+        textDecoration: Boolean(props.u) ? "underline" : "none" satisfies TextDecoration as TextDecoration,
     }
 
     return (
-        <Text
-            {...props}
-            style={flatten({
-                ...withStyles,
-                ...props.style,
-            })}
-        />
+        <Fragment>
+            {props.ss && (<S/>)}
+            <Text
+                {...props}
+                style={flatten({
+                    ...withStyles,
+                    ...props.style,
+                })}
+            />
+            {props.se && (<S/>)}
+        </Fragment>
     )
 }
 
-export {Title, Paragraph, P}
+const S = () => <Text>{' '}</Text>
+
+export {Title, Paragraph, P, S}
