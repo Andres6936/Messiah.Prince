@@ -8,6 +8,12 @@ function defaultAttributeTransform(_name: string, value: string): any {
     return value;
 }
 
+type NodeMetadata = {
+    title: string,
+    chapter: string,
+    metadata: string[],
+}
+
 const getChapterAndTitles = async (xmlPath: string) => {
     const parser = new DOMParser({
         errorHandler: {
@@ -21,7 +27,7 @@ const getChapterAndTitles = async (xmlPath: string) => {
     const xml = await file.text();
     const doc = parser.parseFromString(xml, 'text/xml');
 
-    const getMetadata = (node: Node): string | null | {title: string, chapter: string, metadata: string[]} => {
+    const getMetadata = (node: Node): string | null | NodeMetadata => {
         const ELEMENT_NODE = 1;
 
         if ((node as any).nodeType === ELEMENT_NODE) {
@@ -58,10 +64,14 @@ const getChapterAndTitles = async (xmlPath: string) => {
 
     for (let index = 0; index < doc.childNodes.length; index += 1) {
         const node = getMetadata(doc.childNodes.item(index));
-        if (node !== null && node !== undefined) return node;
+        if (node !== null && node !== undefined) return node as NodeMetadata;
     }
 };
 
 export {
     getChapterAndTitles,
+}
+
+export type {
+    NodeMetadata,
 }

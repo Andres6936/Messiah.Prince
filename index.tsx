@@ -5,7 +5,7 @@ import {Cite, Verse} from './components/cite';
 import {Paragraph, Title} from './components/paragraph';
 import {Chapter, Section} from './components/section';
 import {Bookmark, Section as SectionBookmark} from "./components/bookmark.tsx";
-import {getChapterAndTitles} from './utils/chapter.extract';
+import {getChapterAndTitles, type NodeMetadata} from './utils/chapter.extract';
 import {xmlFileToReactTree, type ComponentMap} from './utils/node.factory';
 
 const components: ComponentMap = {
@@ -26,7 +26,7 @@ const getTreeNode = async (xmlPath: string) => {
     });
 };
 
-const withBook = (nodes: React.ReactNode, metadata: { chapter: string, title: string, metadata: string[] }[]) => {
+const withBook = (nodes: React.ReactNode, metadata: NodeMetadata[]) => {
     return (
         <Document>
             <Page size="A4" style={{
@@ -62,7 +62,8 @@ const withBook = (nodes: React.ReactNode, metadata: { chapter: string, title: st
     const nodes = []
     for await (let chapter of chapters) {
         nodes.push(await getTreeNode(chapter))
-        metadata.push(await getChapterAndTitles(chapter))
+        const nodeMetadata = await getChapterAndTitles(chapter)
+        if (nodeMetadata) metadata.push(nodeMetadata)
     }
 
     ReactPDF.render(withBook(nodes, metadata), `./book-x.pdf`);
