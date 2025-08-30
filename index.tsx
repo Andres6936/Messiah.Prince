@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPDF, {Document, Page, Text, View} from '@react-pdf/renderer';
 
 import {Cite, Verse} from './components/cite';
-import { Cover } from './components/cover.tsx';
+import {Cover} from './components/cover.tsx';
 import {Paragraph, Title} from './components/paragraph';
 import {Chapter, Section} from './components/section';
 import {Bookmark, Section as SectionBookmark} from "./components/bookmark.tsx";
@@ -32,7 +32,8 @@ const withBook = (nodes: React.ReactNode, metadata: NodeMetadata[]) => {
     return (
         <Document>
             <Cover/>
-            <Page size="A4" style={{
+            <Page
+                size="A4" style={{
                 backgroundColor: defaultStyles.background,
                 paddingVertical: "1.5cm",
                 paddingHorizontal: "2cm",
@@ -46,8 +47,15 @@ const withBook = (nodes: React.ReactNode, metadata: NodeMetadata[]) => {
                     </SectionBookmark>
                 ))}
             </Page>
-            <Page size="A4"
-                  style={{paddingVertical: "1.5cm", paddingHorizontal: "2cm", textAlign: "justify", fontSize: "14pt"}}>
+            <Page
+                size="A4"
+                style={{
+                    backgroundColor: defaultStyles.background,
+                    paddingVertical: "1.5cm",
+                    paddingHorizontal: "2cm",
+                    textAlign: "justify",
+                    fontSize: "14pt"
+                }}>
                 {nodes}
             </Page>
         </Document>

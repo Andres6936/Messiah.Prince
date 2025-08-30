@@ -62,6 +62,7 @@ const Cite = (props: CiteProps) => {
             <View style={{paddingHorizontal: "1cm"}}>
                 <View
                     style={{
+                        color: defaultStyles.primary,
                         gap: "0.3cm",
                         fontSize: 12,
                         fontFamily: 'Montserrat',
