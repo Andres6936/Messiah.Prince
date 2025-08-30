@@ -1,24 +1,8 @@
-import React, {Fragment} from "react";
-import {Font, Text, View} from "@react-pdf/renderer"
+import React from "react";
+import {Text, View} from "@react-pdf/renderer"
 import {flatten} from "@react-pdf/stylesheet";
 import {defaultStyles} from "../utils/defaultStyles.ts";
 
-Font.register({
-    family: 'Montserrat',
-    fonts: [
-        {
-            src: './fonts/Montserrat/static/Montserrat-LightItalic.ttf',
-            fontWeight: "light",
-            fontStyle: "italic",
-        },
-        {
-            src: './fonts/Montserrat/static/Montserrat-BoldItalic.ttf',
-            fontWeight: "bold",
-            fontStyle: "italic",
-        }
-    ]
-
-})
 
 const P = (props: React.ComponentPropsWithRef<typeof Text>) => {
     return (

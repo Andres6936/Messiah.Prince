@@ -1,36 +1,8 @@
 import type React from "react"
-import {Font, Text} from "@react-pdf/renderer"
+import {Text} from "@react-pdf/renderer"
 import {flatten, type TextAlign} from "@react-pdf/stylesheet";
 import {defaultStyles} from "../utils/defaultStyles.ts";
 
-Font.register({
-    family: 'Montserrat',
-    fonts: [
-        {
-            src: './fonts/Montserrat/static/Montserrat-Regular.ttf',
-            fontWeight: "normal",
-        },
-        {
-            src: './fonts/Montserrat/static/Montserrat-Bold.ttf',
-            fontWeight: "bold",
-        }
-    ]
-
-})
-
-Font.register({
-    family: "Playfair_Display",
-    fonts: [
-        {
-            src: './fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf',
-            fontWeight: "normal",
-        },
-        {
-            src: './fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf',
-            fontWeight: "bold",
-        }
-    ]
-})
 
 const toInteger = (value: string | number): number => {
     if (typeof value === 'number') return value;

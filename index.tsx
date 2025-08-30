@@ -1,5 +1,7 @@
 import React from 'react';
-import ReactPDF, {Document, Page, Text, View} from '@react-pdf/renderer';
+import ReactPDF, {Document, Page} from '@react-pdf/renderer';
+
+import "./utils/fonts.register"
 
 import {Cite, Verse} from './components/cite';
 import {Cover} from './components/cover.tsx';
@@ -7,7 +9,7 @@ import {Paragraph, Title} from './components/paragraph';
 import {Chapter, Section} from './components/section';
 import {Bookmark, Section as SectionBookmark} from "./components/bookmark.tsx";
 import {getChapterAndTitles, type NodeMetadata} from './utils/chapter.extract';
-import {xmlFileToReactTree, type ComponentMap} from './utils/node.factory';
+import {type ComponentMap, xmlFileToReactTree} from './utils/node.factory';
 import {defaultStyles} from "./utils/defaultStyles.ts";
 
 const components: ComponentMap = {

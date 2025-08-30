@@ -1,5 +1,7 @@
 import ReactPDF, {Document, Page} from '@react-pdf/renderer';
 
+import "./utils/fonts.register"
+
 import {Cover} from "./components/cover.tsx";
 import {Chapter} from './components/section.tsx';
 import {Cite, Verse} from './components/cite.tsx';

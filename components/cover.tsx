@@ -1,4 +1,4 @@
-import {Page, Text, View} from "@react-pdf/renderer";
+import {Page, View} from "@react-pdf/renderer";
 import {Paragraph, Title} from "./paragraph.tsx";
 import {defaultStyles} from "../utils/defaultStyles.ts";
 
