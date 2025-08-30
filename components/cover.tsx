@@ -15,6 +15,17 @@ const Cover = () => {
             borderColor: "#003049",
             backgroundColor: "#f9f7f3"
         }}>
+            <View style={{
+                position: "absolute",
+                top: "1.5cm",
+                alignItems: "center",
+                justifyContent: "center",
+            }}>
+                <Paragraph style={{fontSize: 10, opacity: 0.7}}>
+                    11 de Noviembre, 2009
+                </Paragraph>
+            </View>
+
             <Title bold="true" size={45} style={{lineHeight: 1.2, color: "#003049"}}>
                 Demostración de que Jesucristo es el Mesías esperado por los hebreos
             </Title>
