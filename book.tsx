@@ -5,7 +5,7 @@ import "./utils/fonts.register"
 import {Cover} from "./components/cover.tsx";
 import {Chapter} from './components/section.tsx';
 import {Cite, Verse} from './components/cite.tsx';
-import {Paragraph} from "./components/paragraph.tsx";
+import {P, Paragraph} from "./components/paragraph.tsx";
 import {Bookmark, Section as SectionBookmark} from './components/bookmark.tsx';
 import {defaultStyles} from "./utils/defaultStyles.ts";
 
@@ -83,8 +83,8 @@ const MyDocument = () => (
                     la mejor, debe predicarla para beneficiar a otros.
                     Debe ser un propagador de su fe. No debe
                     “comérsela” él solo, sin importarle lo que le suceda
-                    eternamente a otros. Callar nuestra creencia es
-                    egoísmo cruel, pues al hacerlo condenamos por
+                    eternamente a otros. <P bold='true'>Callar nuestra creencia es
+                    egoísmo cruel</P>, pues al hacerlo condenamos por
                     toda la eternidad a los que no tienen nuestra
                     salvadora fe. El que no predica su fe es porque
                     desprecia a los demás seres humanos, porque no le

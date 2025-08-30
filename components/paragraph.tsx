@@ -1,6 +1,6 @@
 import type React from "react"
 import {Text} from "@react-pdf/renderer"
-import {flatten, type TextAlign} from "@react-pdf/stylesheet";
+import {flatten, type FontStyle, type FontWeight, type TextAlign, type TextDecoration} from "@react-pdf/stylesheet";
 import {defaultStyles} from "../utils/defaultStyles.ts";
 
 
@@ -62,4 +62,28 @@ const Paragraph = (props: React.ComponentPropsWithRef<typeof Text> & ParagraphPr
     )
 }
 
-export {Title, Paragraph}
+type Props = {
+    bold?: string | boolean
+    italic?: string | boolean
+    underline?: string | boolean
+}
+
+const P = (props: React.ComponentPropsWithRef<typeof Text> & Props) => {
+    const withStyles = {
+        fontWeight: Boolean(props.bold) ? "semibold" : "normal" satisfies FontWeight,
+        fontStyle: Boolean(props.italic) ? "italic" : "normal" satisfies FontStyle as FontStyle,
+        textDecoration: Boolean(props.underline) ? "underline" : "none" satisfies TextDecoration as TextDecoration,
+    }
+
+    return (
+        <Text
+            {...props}
+            style={flatten({
+                ...withStyles,
+                ...props.style,
+            })}
+        />
+    )
+}
+
+export {Title, Paragraph, P}
