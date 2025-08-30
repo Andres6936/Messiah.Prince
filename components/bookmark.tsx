@@ -20,13 +20,15 @@ type SectionProps = {
 const Section = (props: SectionProps) => {
     return (
         <View wrap={false} style={{gap: "0.5cm"}}>
-            <View style={{gap: "0.2cm"}}>
+            <View style={{gap: "0.1cm"}}>
+                <Title start="true" bold="true" size={9} style={{textTransform: "uppercase", opacity: 0.7}}>
+                    Capítulo {props.chapter}
+                </Title>
                 <Title start="true" bold="true" size={16}>
                     {props.title}
                 </Title>
-                <Title start="true" bold="true" size={9} style={{paddingLeft: "0.2cm", textTransform: "uppercase", opacity: 0.7}}>Capítulo {props.chapter}: </Title>
             </View>
-            <View style={{gap: "0.2cm", paddingLeft: "0.5cm", borderLeft: 0.5, borderLeftColor: "black"}}>
+            <View style={{marginLeft: "0.4cm", gap: "0.1cm", paddingLeft: "0.5cm", borderLeft: 0.5, borderLeftColor: "black"}} >
                 <Bookmark title={props.title}/>
                 {props.children}
             </View>
@@ -42,20 +44,22 @@ type BookmarkProps = {
 
 const Bookmark = (props: BookmarkProps) => {
     return (
-        <Text>
+        <View style={{flexDirection: "row"}}>
             <Text>•{' '}</Text>
             <Link
                 href={`#${getShortHash(props.title)}`}
                 style={{
+                    flex: 1,
                     color: "black",
                     fontSize: 12,
                     fontStyle: "italic",
                     textDecoration: "none",
+                    lineHeight: 1.5
                 }}
             >
                 {props.title}
             </Link>
-        </Text>
+        </View>
     )
 }
 
