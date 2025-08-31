@@ -34,7 +34,15 @@ const getTreeNode = async (xmlPath: string) => {
 
 const withBook = (nodes: React.ReactNode, metadata: NodeMetadata[]) => {
     return (
-        <Document>
+        <Document
+            title='Demostración de que Jesucristo es el Mesías esperado por los hebreos'
+            author='Rafael Luis Serralta Nogués'
+            subject='Jesús el Mesías Principe'
+            keywords='Jesús, Mesías, Principe'
+            creator='Rafael Luis Serralta Nogués'
+            producer='Joan Andrés Buriticá Salazar'
+            language='es'
+        >
             <Cover/>
             <Page
                 size="A4" style={{
