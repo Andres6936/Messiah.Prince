@@ -1,15 +1,19 @@
-# jesús
+# Demostración de que Jesucristo es el Mesías esperado por los hebreos
 
-To install dependencies:
+- Rafael Luis Serralta Nogués (1928 - 2023)
+- Télefono: (305) 951-7435
+- Email: rlserralta@netzero.net
+- Miami, FL 33265-5126
 
-```bash
-bun install
-```
 
-To run:
+- Edición: Joan Andrés Buriticá Salazar
+- Email: andres6936@live.com
 
-```bash
-bun run index.ts
-```
+------
 
-This project was created using `bun init` in bun v1.2.21. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+###  Por qué escribí este libro
+
+El propósito de este libro es ayudar a todos los hebreos de buena fe a
+comprobar que Jesucristo es el Mesías. Lo hago, para que al comprobarlo,
+puedan obtener la salvación de su alma, aceptándolo como el Cordero de
+Dios que quita el pecado del mundo.
