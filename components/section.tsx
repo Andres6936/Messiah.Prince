@@ -31,7 +31,7 @@ const Section = (props: SectionProps) => {
                 size="16"
                 start="true"
                 id={getShortHash(props.title)}
-                bold="true" style={{paddingTop: "1.2cm", paddingBottom: "0.3cm"}}
+                bold="true" style={{paddingTop: "1cm", paddingBottom: "0.3cm"}}
             >
                 {props.title}
             </Title>
