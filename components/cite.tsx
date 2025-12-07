@@ -80,6 +80,7 @@ const Indicator = ({indicator}: { indicator: string | undefined | null }) => {
             style={{
                 fontWeight: "bold",
                 fontSize: 6,
+                color: defaultStyles.indicator,
             }}
         >
             {'  '}{indicator}{'  '}
