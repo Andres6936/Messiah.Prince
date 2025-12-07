@@ -22,7 +22,7 @@ const Cover = () => {
                 alignItems: "center",
                 justifyContent: "center",
             }}>
-                <Paragraph style={{fontSize: 10, opacity: 0.7}}>
+                <Paragraph style={{fontSize: 9, opacity: 0.8}}>
                     11 de Noviembre, 2009
                 </Paragraph>
             </View>
@@ -63,7 +63,7 @@ const Cover = () => {
                 <Paragraph>
                     Email: andres6936@live.com
                 </Paragraph>
-                <Paragraph style={{fontSize: 10, opacity: 0.7}}>
+                <Paragraph style={{fontSize: 9, opacity: 0.8}}>
                     Version: Agosto de 2025
                 </Paragraph>
             </View>
