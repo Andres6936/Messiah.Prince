@@ -64,7 +64,7 @@ const Cover = () => {
                     Email: andres6936@live.com
                 </Paragraph>
                 <Paragraph style={{fontSize: 9, opacity: 0.8}}>
-                    Version: Agosto de 2025
+                    Version: Diciembre de 2025
                 </Paragraph>
             </View>
         </Page>
