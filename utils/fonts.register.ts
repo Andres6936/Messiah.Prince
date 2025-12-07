@@ -4,6 +4,10 @@ Font.register({
     family: 'Montserrat',
     fonts: [
         {
+            src: './fonts/Montserrat/static/Montserrat-Light.ttf',
+            fontWeight: "light",
+        },
+        {
             src: './fonts/Montserrat/static/Montserrat-LightItalic.ttf',
             fontWeight: "light",
             fontStyle: "italic",
@@ -52,4 +56,3 @@ Font.register({
         }
     ]
 })
-
