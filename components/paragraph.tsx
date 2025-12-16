@@ -87,7 +87,8 @@ const P = (props: React.ComponentPropsWithRef<typeof Text> & Props) => {
         <Fragment>
             {props.ss && (<S/>)}
             <Text
-                {...props}
+               {...props}
+                hyphenationCallback={value => [value]}
                 style={flatten({
                     ...withStyles,
                     ...props.style,
