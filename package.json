@@ -1,8 +1,10 @@
 {
-  "name": "jesús",
-  "module": "index.ts",
+  "name": "messiah-prince",
   "type": "module",
   "private": true,
+  "scripts": {
+    "build": "bun run index.tsx"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "oxlint-tsgolint": "^0.0.4"
