@@ -90,5 +90,5 @@ const withBook = (nodes: React.ReactNode, metadata: NodeMetadata[]) => {
         if (nodeMetadata) metadata.push(nodeMetadata)
     }
 
-    ReactPDF.render(withBook(nodes, metadata), `./book-x.pdf`);
+    ReactPDF.render(withBook(nodes, metadata), `./book.pdf`);
 })()
