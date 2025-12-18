@@ -1,6 +1,7 @@
-import {Page, View} from "@react-pdf/renderer";
-import {Paragraph, Title} from "./paragraph.tsx";
-import {defaultStyles} from "../utils/defaultStyles.ts";
+import { Page, View } from "@react-pdf/renderer";
+
+import {Paragraph, Title} from "~/components/paragraph.tsx";
+import {defaultStyles} from "~/utils/defaultStyles.ts";
 
 const Cover = () => {
     return (

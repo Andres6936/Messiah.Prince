@@ -3,8 +3,8 @@ import ReactPDF, {Document, Page} from '@react-pdf/renderer';
 
 import "~/utils/fonts.register"
 
+import {Cover} from './cover.tsx';
 import {Cite, Verse} from '~/components/cite';
-import {Cover} from '~/components/cover.tsx';
 import {P, S, Paragraph, Title} from '~/components/paragraph';
 import {Chapter, Section} from '~/components/section';
 import {Bookmark, Section as SectionBookmark} from "~/components/bookmark.tsx";
