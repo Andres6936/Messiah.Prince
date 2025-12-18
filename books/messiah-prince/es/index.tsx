@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactPDF, {Document, Page} from '@react-pdf/renderer';
 
-import "./utils/fonts.register"
+import "~/utils/fonts.register"
 
-import {Cite, Verse} from './components/cite';
-import {Cover} from './components/cover.tsx';
-import {P, S, Paragraph, Title} from './components/paragraph';
-import {Chapter, Section} from './components/section';
-import {Bookmark, Section as SectionBookmark} from "./components/bookmark.tsx";
-import {getChapterAndTitles, type NodeMetadata} from './utils/chapter.extract';
-import {type ComponentMap, xmlFileToReactTree} from './utils/node.factory';
-import {defaultStyles} from "./utils/defaultStyles.ts";
+import {Cite, Verse} from '~/components/cite';
+import {Cover} from '~/components/cover.tsx';
+import {P, S, Paragraph, Title} from '~/components/paragraph';
+import {Chapter, Section} from '~/components/section';
+import {Bookmark, Section as SectionBookmark} from "~/components/bookmark.tsx";
+import {getChapterAndTitles, type NodeMetadata} from '~/utils/chapter.extract';
+import {type ComponentMap, xmlFileToReactTree} from '~/utils/node.factory';
+import {defaultStyles} from "~/utils/defaultStyles.ts";
 
 const components: ComponentMap = {
     Paragraph,
@@ -76,7 +76,7 @@ const withBook = (nodes: React.ReactNode, metadata: NodeMetadata[]) => {
 
 
 (async () => {
-    const glob = new Bun.Glob('./chapters/*.xml');
+    const glob = new Bun.Glob(import.meta.dir + '/chapters/*.xml');
     const chapters = []
     for await (const file of glob.scan(".")) {
         chapters.push(file);
