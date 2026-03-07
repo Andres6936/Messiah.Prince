@@ -15,7 +15,10 @@ import {
   getChapterAndTitles,
   type NodeMetadata,
 } from "~/utils/chapter.extract";
-import { type ComponentMap, xmlFileToReactTree } from "~/utils/node.factory";
+import {
+  type ComponentMap,
+  xmlFileToReactTree,
+} from "~/utils/node.factory";
 import { defaultStyles } from "~/utils/defaultStyles.ts";
 
 const components: ComponentMap = {
@@ -38,7 +41,10 @@ const getTreeNode = async (xmlPath: string) => {
   });
 };
 
-const withBook = (nodes: React.ReactNode, metadata: NodeMetadata[]) => {
+const withBook = (
+  nodes: React.ReactNode,
+  metadata: NodeMetadata[],
+) => {
   return (
     <Document
       title="Demonstration that Jesus Christ is the Messiah that Hebrews await"
@@ -64,6 +70,7 @@ const withBook = (nodes: React.ReactNode, metadata: NodeMetadata[]) => {
         {metadata.map((it) => (
           <SectionBookmark
             key={it.chapter}
+            lang="en"
             title={it.title}
             chapter={it.chapter}
           >

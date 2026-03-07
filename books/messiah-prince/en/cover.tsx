@@ -38,7 +38,8 @@ const Cover = () => {
         size={45}
         style={{ lineHeight: 1.2, color: defaultStyles.primary }}
       >
-        Demonstration that Jesus Christ is the Messiah that Hebrews await
+        Demonstration that Jesus Christ is the Messiah that Hebrews
+        await
       </Title>
       <View
         style={{
@@ -48,7 +49,9 @@ const Cover = () => {
           gap: "0.3cm",
         }}
       >
-        <Paragraph>Rafael Luis Serralta Nogués (1928 - 2023)</Paragraph>
+        <Paragraph>
+          Rafael Luis Serralta Nogués (1928 - 2023)
+        </Paragraph>
         <Paragraph>Phone: (305) 951-7435</Paragraph>
         <Paragraph>Email: rlserralta@netzero.net</Paragraph>
         <Paragraph>Miami, FL 33265-5126</Paragraph>
@@ -66,7 +69,7 @@ const Cover = () => {
         <Paragraph>Edition: Joan Andrés Buriticá Salazar</Paragraph>
         <Paragraph>Email: andres6936@live.com</Paragraph>
         <Paragraph style={{ fontSize: 9, opacity: 0.8 }}>
-          Version: December 2025
+          Version: March 2026
         </Paragraph>
       </View>
     </Page>
